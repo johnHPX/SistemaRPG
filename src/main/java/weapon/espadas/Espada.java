@@ -3,14 +3,15 @@ package weapon.espadas;
 import weapon.Arma;
 
 public abstract class Espada extends Arma {
-    public void ataqueHorizontal(){
-        System.out.println("Ataque horizontal! +50 pontos");
+    public Espada(){
+        setTipo("espada");
     }
 
-    public void ataqueVertical(){
-        System.out.println("Ataque vertical! +60 pontos");
+    @Override
+    public void status() {
+        System.out.println("Nome: "+getNome());
+        System.out.println("Tipo: "+getTipo());
+        System.out.println("Descrição: "+getDescricao());
+        System.out.println("Dano: "+getDano());
     }
-
-    public abstract void ataqueCritico();
-
 }

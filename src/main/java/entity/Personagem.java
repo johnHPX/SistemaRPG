@@ -11,6 +11,10 @@ public abstract class Personagem extends Entidade{
     private Acao acao;
     private Ataque ataque;
 
+    public Estilo getEstilo() {
+        return estilo;
+    }
+
     public void setAtaque(Ataque ataque) {
         this.ataque = ataque;
     }
@@ -27,16 +31,8 @@ public abstract class Personagem extends Entidade{
         acao.executar(this);
     }
 
-    public Arma getArma() {
-        return arma;
-    }
-
     public void setArma(Arma arma) {
         this.arma = arma;
-    }
-
-    public Estilo getEstilo() {
-        return estilo;
     }
 
     protected void setEstilo(Estilo estilo) {
@@ -44,12 +40,16 @@ public abstract class Personagem extends Entidade{
     }
 
     public void getStatus(){
+        System.out.println("-------------------------------------");
         System.out.println("Name: "+getNome());
         System.out.println("Descrição: "+getDescricao());
         System.out.println("Nivel: "+getNivel());
         System.out.println("PV: "+getPv());
         System.out.println("MP: "+getMp());
-        System.out.println("Estilo: "+getEstilo().getNome());
-        System.out.println("Arma: "+getArma().getNome());
+        System.out.println("- - - - - - - - - - - - - - - - - - -");
+        estilo.status();
+        System.out.println("- - - - - - - - - - - - - - - - - - -");
+        arma.status();
+        System.out.println("-------------------------------------");
     }
 }

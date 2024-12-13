@@ -1,11 +1,9 @@
 package style;
 
-import entity.Inimigo;
-import weapon.Arma;
-
 public abstract class Estilo {
     private String nome;
     private int bonusDano;
+    private String resistencia;
     private int bonusResistencia;
 
     public String getNome() {
@@ -24,6 +22,14 @@ public abstract class Estilo {
         this.bonusDano = bonusDano;
     }
 
+    public String getResistencia() {
+        return resistencia;
+    }
+
+    public void setResistencia(String resistencia) {
+        this.resistencia = resistencia;
+    }
+
     public int getBonusResistencia() {
         return bonusResistencia;
     }
@@ -32,7 +38,6 @@ public abstract class Estilo {
         this.bonusResistencia = bonusResistencia;
     }
 
-    public abstract void ataqueNormal(Arma arma, Inimigo inimigo);
+    public abstract void status();
 
-    public abstract void ataqueEspecial(Arma arma, Inimigo inimigo);
 }

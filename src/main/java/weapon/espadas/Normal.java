@@ -4,13 +4,8 @@ public class Normal extends Espada{
 
     public Normal(){
         setNome("Normal");
-        setDescription("Uma espada normal...");
-        setNivel(1);
+        setDescricao("Uma espada normal...");
         setDano(120);
     }
 
-    @Override
-    public void ataqueCritico() {
-        System.out.println("Ataque crítico");
-    }
 }

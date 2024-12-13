@@ -2,6 +2,7 @@ package character.personas;
 
 import entity.Personagem;
 import style.Arqueiro;
+import weapon.arcos.ArcoComum;
 import weapon.espadas.Normal;
 
 public class Wander extends Personagem {
@@ -13,7 +14,7 @@ public class Wander extends Personagem {
         setPv(400);
         setMp(50);
         setEstilo(new Arqueiro());
-        setArma(new Normal());
+        setArma(new ArcoComum());
     }
 
 }

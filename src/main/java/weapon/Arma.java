@@ -1,10 +1,11 @@
 package weapon;
 
 public abstract class Arma {
+
     private String nome;
-    private String description;
+    private String tipo;
+    private String descricao;
     private int dano;
-    private int nivel;
 
     public String getNome() {
         return nome;
@@ -14,12 +15,20 @@ public abstract class Arma {
         this.nome = nome;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public int getDano() {
@@ -30,11 +39,5 @@ public abstract class Arma {
         this.dano = dano;
     }
 
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
-    }
+    public abstract void status();
 }
