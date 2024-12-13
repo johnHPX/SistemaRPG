@@ -4,7 +4,7 @@ import entity.Inimigo;
 
 public class BatEye extends Inimigo {
     public BatEye(){
-        setNome("BatEye");
+        setNome("Bat Eye");
         setDescricao("Inimigo voador");
         setPv(400);
         setMp(50);
@@ -12,8 +12,5 @@ public class BatEye extends Inimigo {
         setTipo("Voador");
     }
 
-    @Override
-    public void executarAcao() {
-        System.out.println(this.getClass().getSimpleName()+ " Atacou!");
-    }
+
 }

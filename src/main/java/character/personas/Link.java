@@ -1,7 +1,8 @@
 package character.personas;
 
 import entity.Personagem;
-import estilo.Guerreiro;
+import style.Guerreiro;
+import weapon.espadas.Normal;
 
 public class Link extends Personagem {
 
@@ -12,10 +13,7 @@ public class Link extends Personagem {
         setPv(450);
         setMp(100);
         setEstilo(new Guerreiro());
+        setArma(new Normal());
     }
 
-    @Override
-    public void executarAcao() {
-        System.out.println("Link está executando uma ação...");
-    }
 }

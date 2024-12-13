@@ -1,7 +1,8 @@
 package character.personas;
 
 import entity.Personagem;
-import estilo.Arqueiro;
+import style.Arqueiro;
+import weapon.espadas.Normal;
 
 public class Wander extends Personagem {
 
@@ -12,10 +13,7 @@ public class Wander extends Personagem {
         setPv(400);
         setMp(50);
         setEstilo(new Arqueiro());
+        setArma(new Normal());
     }
 
-    @Override
-    public void executarAcao() {
-        System.out.println("Wander está execuntando uma ação");
-    }
 }

@@ -11,8 +11,5 @@ public class Dodongo extends Inimigo {
         setNivel(1);
     }
 
-    @Override
-    public void executarAcao() {
-        System.out.println(this.getClass().getSimpleName()+ " Atacou!");
-    }
+
 }

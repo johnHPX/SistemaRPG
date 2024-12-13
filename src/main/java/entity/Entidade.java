@@ -23,8 +23,6 @@ public abstract class Entidade {
         this.mp = mp;
     }
 
-    public abstract void executarAcao();
-
     public String getNome() {
         return nome;
     }

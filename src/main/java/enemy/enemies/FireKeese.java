@@ -4,7 +4,7 @@ import entity.Inimigo;
 
 public class FireKeese extends Inimigo {
     public FireKeese(){
-        setNome("FireKeese");
+        setNome("Fire Keese");
         setDescricao("Inimigo voador");
         setPv(300);
         setMp(50);
@@ -12,8 +12,4 @@ public class FireKeese extends Inimigo {
         setTipo("Voador");
     }
 
-    @Override
-    public void executarAcao() {
-        System.out.println(this.getClass().getSimpleName()+ " Atacou!");
-    }
 }
