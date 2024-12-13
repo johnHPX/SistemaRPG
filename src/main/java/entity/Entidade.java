@@ -1,11 +1,29 @@
-package enemy;
+package entity;
 
-public abstract class Enemy {
+public abstract class Entidade {
     private String nome;
     private String descricao;
-    private int pontosVida;
-    private int pontosMagia;
     private int nivel;
+    private int pv;
+    private int mp;
+
+    public int getPv() {
+        return pv;
+    }
+
+    public void setPv(int pv) {
+        this.pv = pv;
+    }
+
+    public int getMp() {
+        return mp;
+    }
+
+    public void setMp(int mp) {
+        this.mp = mp;
+    }
+
+    public abstract void executarAcao();
 
     public String getNome() {
         return nome;
@@ -21,22 +39,6 @@ public abstract class Enemy {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public int getPontosVida() {
-        return pontosVida;
-    }
-
-    public void setPontosVida(int pontosVida) {
-        this.pontosVida = pontosVida;
-    }
-
-    public int getPontosMagia() {
-        return pontosMagia;
-    }
-
-    public void setPontosMagia(int pontosMagia) {
-        this.pontosMagia = pontosMagia;
     }
 
     public int getNivel() {

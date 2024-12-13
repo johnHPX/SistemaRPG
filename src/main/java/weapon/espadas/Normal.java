@@ -1,8 +1,8 @@
 package weapon.espadas;
 
-public class Normal implements Espada{
+public class Normal extends Espada{
     @Override
-    public void corteLongo() {
-        System.out.println("Corte longo de"+this.getClass().getName());
+    public void ataqueCritico() {
+        System.out.println("Ataque crítico");
     }
 }

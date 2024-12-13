@@ -1,8 +1,16 @@
 package weapon.espadas;
 
-public class BusterSword implements Espada{
+public class BusterSword extends Espada{
+
+    public BusterSword(){
+        setNome("BusterSword");
+        setDano(320);
+        setDescription("Espada longa");
+        setNivel(1);
+    }
+
     @Override
-    public void corteLongo() {
-        System.out.println("Corte longo de"+this.getClass().getName());
+    public void ataqueCritico() {
+        System.out.println("Ataque crítico");
     }
 }
