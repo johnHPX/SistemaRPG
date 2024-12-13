@@ -1,8 +1,9 @@
 package weapon.fistWeapons;
 
-public class GarrasFlamejantes implements FistWeapon{
-    @Override
-    public void golpe() {
-        System.out.println("Golpe com "+this.getClass().getName());
+public class GarrasFlamejantes extends FistWeapon{
+    public GarrasFlamejantes(){
+        setNome("Garras Flamenjantes");
+        setDescricao("No have description.");
+        setDano(210);
     }
 }

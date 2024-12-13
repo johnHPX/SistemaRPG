@@ -3,8 +3,9 @@ package enemy.enemies;
 import entity.Inimigo;
 
 public class Dodongo extends Inimigo {
-    public Dodongo(){
+    public Dodongo(String apelido){
         setNome("Dodongo");
+        setApelido(apelido);
         setDescricao("Inimigo terrestre");
         setPv(800);
         setMp(50);

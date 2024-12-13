@@ -1,8 +1,11 @@
 package weapon.cajados;
 
-public class ChamaEterna implements Cajado{
-    @Override
-    public void ataqueMagico() {
-        System.out.println("Ataque mágico por "+this.getClass().getName());
+public class ChamaEterna extends Cajado{
+
+    public ChamaEterna(){
+        setNome("Chama Eterna");
+        setDescricao("No have description.");
+        setDano(140);
     }
+
 }

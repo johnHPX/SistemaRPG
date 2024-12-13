@@ -2,9 +2,9 @@ package character.personas;
 
 import entity.Personagem;
 import style.Guerreiro;
-import weapon.espadas.Normal;
+import weapon.espadas.EspadaComum;
 
-public class Link extends Personagem {
+public final class Link extends Personagem {
 
     public Link(){
         setNome("Link");
@@ -13,7 +13,7 @@ public class Link extends Personagem {
         setPv(450);
         setMp(100);
         setEstilo(new Guerreiro());
-        setArma(new Normal());
+        setArma(new EspadaComum());
     }
 
 }

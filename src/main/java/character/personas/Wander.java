@@ -3,13 +3,12 @@ package character.personas;
 import entity.Personagem;
 import style.Arqueiro;
 import weapon.arcos.ArcoComum;
-import weapon.espadas.Normal;
 
-public class Wander extends Personagem {
+public final class Wander extends Personagem {
 
     public Wander(){
         setNome("Wander");
-        setDescricao("Um heroi desonhecido");
+        setDescricao("Um heroi desconhecido. Em busca de revivier sua amada.");
         setNivel(1);
         setPv(400);
         setMp(50);

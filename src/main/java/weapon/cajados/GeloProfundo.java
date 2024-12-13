@@ -1,8 +1,9 @@
 package weapon.cajados;
 
-public class GeloProfundo implements Cajado{
-    @Override
-    public void ataqueMagico() {
-        System.out.println("Ataque mágico por "+this.getClass().getName());
+public class GeloProfundo extends Cajado{
+    public GeloProfundo(){
+        setNome("Gelo profundo");
+        setDescricao("No have description.");
+        setDano(130);
     }
 }

@@ -1,8 +1,8 @@
 package weapon.espadas;
 
-public class Normal extends Espada{
+public class EspadaComum extends Espada{
 
-    public Normal(){
+    public EspadaComum(){
         setNome("Normal");
         setDescricao("Uma espada normal...");
         setDano(120);

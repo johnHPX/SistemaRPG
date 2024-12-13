@@ -1,8 +1,9 @@
 package weapon.fistWeapons;
 
-public class TremorDasRochas implements FistWeapon{
-    @Override
-    public void golpe() {
-        System.out.println("Golpe com "+this.getClass().getName());
+public class TremorDasRochas extends FistWeapon{
+    public TremorDasRochas(){
+        setNome("Tremor das Rochas");
+        setDescricao("No have description.");
+        setDano(170);
     }
 }

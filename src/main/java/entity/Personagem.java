@@ -2,13 +2,11 @@ package entity;
 
 import mechanics.Ataque;
 import style.Estilo;
-import mechanics.Acao;
 import weapon.Arma;
 
 public abstract class Personagem extends Entidade{
     private Estilo estilo;
     private Arma arma;
-    private Acao acao;
     private Ataque ataque;
 
     public Estilo getEstilo() {
@@ -23,14 +21,6 @@ public abstract class Personagem extends Entidade{
         ataque.executarAtaque(getNome(), estilo, arma, inimigo);
     }
 
-    public void setAcao(Acao acao) {
-        this.acao = acao;
-    }
-
-    public void executar(){
-        acao.executar(this);
-    }
-
     public void setArma(Arma arma) {
         this.arma = arma;
     }
@@ -40,7 +30,6 @@ public abstract class Personagem extends Entidade{
     }
 
     public void getStatus(){
-        System.out.println("-------------------------------------");
         System.out.println("Name: "+getNome());
         System.out.println("Descrição: "+getDescricao());
         System.out.println("Nivel: "+getNivel());
@@ -50,6 +39,5 @@ public abstract class Personagem extends Entidade{
         estilo.status();
         System.out.println("- - - - - - - - - - - - - - - - - - -");
         arma.status();
-        System.out.println("-------------------------------------");
     }
 }

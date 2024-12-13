@@ -1,8 +1,9 @@
 package weapon.fistWeapons;
 
-public class FuriaDosMares implements FistWeapon{
-    @Override
-    public void golpe() {
-        System.out.println("Golpe com "+this.getClass().getName());
+public class FuriaDosMares extends FistWeapon{
+    public FuriaDosMares(){
+        setNome("Furia dos Mares");
+        setDescricao("No have description.");
+        setDano(200);
     }
 }

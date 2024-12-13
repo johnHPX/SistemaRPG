@@ -1,8 +1,9 @@
 package weapon.adagas;
 
-public class DenteDoAbismo implements Adaga {
-    @Override
-    public void cortefurtivo() {
-        System.out.println("corte furtivo de "+this.getClass().getName());
+public class DenteDoAbismo extends Adaga {
+    public DenteDoAbismo(){
+        setNome("Dente do Abismo");
+        setDescricao("No have description.");
+        setDano(300);
     }
 }

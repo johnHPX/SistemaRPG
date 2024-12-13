@@ -1,24 +1,6 @@
 package style;
 
-import weapon.flechas.Flecha;
-
-import java.util.ArrayList;
-
 public class Arqueiro extends Estilo {
-
-    private ArrayList<Flecha> aljava;
-
-    public void addFlecha(Flecha flecha){
-        aljava.add(flecha);
-    }
-
-    public void removeFlecha(Flecha flecha){
-        aljava.remove(flecha);
-    }
-
-    public ArrayList<Flecha> getAljava() {
-        return aljava;
-    }
 
     public Arqueiro(){
         setNome("Arqueiro");

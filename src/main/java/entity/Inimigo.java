@@ -2,6 +2,15 @@ package entity;
 
 public abstract class Inimigo extends Entidade{
     private String tipo;
+    private String apelido;
+
+    public String getApelido() {
+        return apelido;
+    }
+
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
+    }
 
     public String getTipo() {
         return tipo;
@@ -13,6 +22,7 @@ public abstract class Inimigo extends Entidade{
 
     public void getStatus(){
         System.out.println("Name: "+getNome());
+        System.out.println("Apelido: "+getApelido());
         System.out.println("Descrição: "+getDescricao());
         System.out.println("Nivel: "+getNivel());
         System.out.println("PV: "+getPv());
