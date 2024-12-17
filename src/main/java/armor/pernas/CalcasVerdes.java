@@ -1,33 +1,14 @@
 package armor.pernas;
 
-public class CalcasVerdes extends Pernas{
+import armor.DecoratorArmadura;
+import entity.Personagem;
 
-	private int defesa;
-	private String especialidade;
-	
-	public CalcasVerdes() {
-		setNome("CalcasVerdes");
-		setDefesa(15);
-		setDescricao("Calças verdes de tecido reforçado");
-		setEspecialidade("Dá mais coragem para quem estiver usando");
-		setNivel(2);
-	}
+public class CalcasVerdes extends DecoratorArmadura {
 
-	public int getDefesa() {
-		return defesa;
-	}
+    public CalcasVerdes(Personagem p) {
+        super(p);
+        setArmadura("Calças Verdes");
+        setPv(15);
+    }
 
-	public void setDefesa(int defesa) {
-		this.defesa = defesa;
-	}
-
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-	
-	
 }

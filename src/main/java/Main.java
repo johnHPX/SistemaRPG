@@ -1,4 +1,7 @@
-import battlefield.Arena1;
+import armor.capacetes.ElmoDeFerro;
+import armor.luvas.LuvasDeFerro;
+import armor.peitorais.TunicaVerde;
+import armor.pernas.PerneirasDeFerro;
 import character.factorys.FabricaGuerreiro;
 import character.factorys.FabricaPersonagem;
 import character.personas.Link;
@@ -8,7 +11,6 @@ import enemy.factorys.FabricaTerrestre;
 import entity.Inimigo;
 import entity.Personagem;
 import mechanics.AtaquesArcos.TiroRapido;
-import weapon.arcos.Arco;
 import weapon.arcos.ArcoComum;
 
 public class Main {
@@ -21,26 +23,38 @@ public class Main {
 
 
     public static void teste(){
-        Personagem p;
-        FabricaPersonagem fp = new FabricaGuerreiro();
+        System.out.println("===================================");
+        System.out.println("\t\t\tFactory");
+        System.out.println("===================================");
 
-        p = fp.criar(Link.class);
+        Personagem p;
+        FabricaPersonagem fabGue = new FabricaGuerreiro();
+
+        p = fabGue.criar(Link.class);
         p.getStatus();
 
-        // ------------------------------
         Inimigo i;
-        FabricaInimigo fi = new FabricaTerrestre();
-        i = fi.criar(Lizalfos.class, "lizalfo");
+        FabricaInimigo fabTer = new FabricaTerrestre();
+        i = fabTer.criar(Lizalfos.class, "lizalfo");
         i.getStatus();
-        p.executarAtaque(i);
-        i.getStatus();
-        System.out.println("-------------------------");
+
+        System.out.println("===================================");
+        System.out.println("\t\t\tStrategy");
+        System.out.println("===================================");
 
         p.setArma(new ArcoComum());
         p.setAtaque(new TiroRapido());
         p.executarAtaque(i);
 
-        System.out.println("===============================");
-        System.out.println("Decorator");
+        System.out.println("===================================");
+        System.out.println("\t\t\tDecorator");
+        System.out.println("===================================");
+
+        p = new ElmoDeFerro(p);
+        p = new TunicaVerde(p);
+        p = new PerneirasDeFerro(p);
+        p = new LuvasDeFerro(p);
+
+        p.getStatus();
     }
 }

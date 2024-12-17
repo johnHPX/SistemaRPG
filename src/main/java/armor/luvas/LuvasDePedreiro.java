@@ -1,33 +1,13 @@
 package armor.luvas;
 
-public class LuvasDePedreiro extends Luvas{
-	
-	private int defesa;
-	private String especialidade;
-	
-	public LuvasDePedreiro() {
-		setNome("LuvasDePedreiro");
-		setDefesa(8);
-		setDescricao("Luvas extraordinárias de um antigo Semideus");
-		setEspecialidade("Receba ataques e devolva-os");
-		setNivel(4);
-	}
+import armor.DecoratorArmadura;
+import entity.Personagem;
 
-	public int getDefesa() {
-		return defesa;
-	}
+public class LuvasDePedreiro extends DecoratorArmadura {
 
-	public void setDefesa(int defesa) {
-		this.defesa = defesa;
+	public LuvasDePedreiro(Personagem p) {
+		super(p);
+		setArmadura("Luvas de Pedreiro");
+		setPv(8);
 	}
-
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-	
-	
 }

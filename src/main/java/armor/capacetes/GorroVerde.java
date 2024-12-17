@@ -1,33 +1,14 @@
 package armor.capacetes;
 
-public class GorroVerde extends Elmo{
+import armor.DecoratorArmadura;
+import entity.Personagem;
 
-	private int defesa;
-	private String especialidade;
-	
-	public GorroVerde() {
-		setNome("GorroVerde");
-		setDefesa(10);
-		setDescricao("Um gorro verde longo e pontudo");
-		setEspecialidade("Dá mais coragem para quem estiver usando");
-		setNivel(2);
+public class GorroVerde extends DecoratorArmadura {
+
+	public GorroVerde(Personagem p){
+		super(p);
+		setPv(10);
+		setArmadura("Gorro Verde");
 	}
 
-	public int getDefesa() {
-		return defesa;
-	}
-
-	public void setDefesa(int defesa) {
-		this.defesa = defesa;
-	}
-
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-	
-	
 }

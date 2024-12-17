@@ -1,33 +1,14 @@
 package armor.peitorais;
 
-public class TunicaVerde extends Peitoral{
-	
-	private int defesa;
-	private String especialidade;
-	
-	public TunicaVerde() {
-		setNome("TunicaVerde");
-		setDefesa(13);
-		setDescricao("Uma tûnica verde de tecido reforçado");
-		setEspecialidade("Dá mais coragem para quem estiver usando");
-		setNivel(2);
-	}
+import armor.DecoratorArmadura;
+import entity.Personagem;
 
-	public int getDefesa() {
-		return defesa;
-	}
+public class TunicaVerde extends DecoratorArmadura {
 
-	public void setDefesa(int defesa) {
-		this.defesa = defesa;
-	}
+    public TunicaVerde(Personagem p) {
+        super(p);
+        setArmadura("Túnica Verda");
+        setPv(13);
+    }
 
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-	
-	
 }

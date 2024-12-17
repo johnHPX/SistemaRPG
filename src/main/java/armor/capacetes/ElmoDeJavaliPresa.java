@@ -1,33 +1,14 @@
 package armor.capacetes;
 
-public class ElmoDeJavaliPresa extends Elmo{
+import armor.DecoratorArmadura;
+import entity.Personagem;
 
-	private int defesa;
-	private String especialidade;
-	
-	public ElmoDeJavaliPresa() {
-		setNome("ElmoDeJavaliPresa");
-		setDefesa(30);
-		setDescricao("Elmo de aço pesado com o formato da cabeça de um javali");
-		setEspecialidade("Defende bem contra Ataque Físico");
-		setNivel(4);
+public class ElmoDeJavaliPresa extends DecoratorArmadura {
+
+	public ElmoDeJavaliPresa(Personagem p) {
+		super(p);
+		setPv(30);
+		setArmadura("Elmo De Javali Presa");
 	}
 
-	public int getDefesa() {
-		return defesa;
-	}
-
-	public void setDefesa(int defesa) {
-		this.defesa = defesa;
-	}
-
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-	
-	
 }

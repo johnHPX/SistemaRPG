@@ -1,33 +1,14 @@
 package armor.pernas;
 
-public class PerneirasDeFerro extends Pernas{
+import armor.DecoratorArmadura;
+import entity.Personagem;
 
-	private int defesa;
-	private String especialidade;
-	
-	public PerneirasDeFerro() {
-		setNome("PerneirasDeFerro");
-		setDefesa(23);
-		setDescricao("Perneiras pesadas de ferro");
-		setEspecialidade("Defende bem contra fogo");
-		setNivel(2);
-	}
+public class PerneirasDeFerro extends DecoratorArmadura {
 
-	public int getDefesa() {
-		return defesa;
-	}
+    public PerneirasDeFerro(Personagem p) {
+        super(p);
+        setArmadura("Perneiras de Ferro");
+        setPv(23);
+    }
 
-	public void setDefesa(int defesa) {
-		this.defesa = defesa;
-	}
-
-	public String getEspecialidade() {
-		return especialidade;
-	}
-
-	public void setEspecialidade(String especialidade) {
-		this.especialidade = especialidade;
-	}
-	
-	
 }
