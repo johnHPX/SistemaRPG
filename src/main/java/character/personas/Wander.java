@@ -2,7 +2,6 @@ package character.personas;
 
 import entity.Personagem;
 import mechanics.AtaquesArcos.TiroRapido;
-import mechanics.AtaquesEspadas.CorteHorizontal;
 import style.Arqueiro;
 import weapon.arcos.ArcoComum;
 
