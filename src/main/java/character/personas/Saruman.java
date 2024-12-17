@@ -1,6 +1,7 @@
 package character.personas;
 
 import entity.Personagem;
+import mechanics.AtaquesEspadas.CorteHorizontal;
 import style.Mago;
 import weapon.cajados.CajadoComum;
 
@@ -13,5 +14,6 @@ public final class Saruman extends Personagem {
         setMp(350);
         setEstilo(new Mago());
         setArma(new CajadoComum());
+        setAtaque(new CorteHorizontal());
     }
 }

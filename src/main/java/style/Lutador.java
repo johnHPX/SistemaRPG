@@ -4,7 +4,7 @@ public class Lutador extends Estilo {
     public Lutador(){
         setNome("Lutador");
         setBonusDano(10);
-        setResistencia("");
+        setResistencia("Físico");
         setBonusResistencia(40);
     }
 

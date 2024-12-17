@@ -10,7 +10,7 @@ public class FabricaVoador implements FabricaInimigo {
         if (e.equals(BatEye.class))
             return new BatEye(apelido);
         else if(e.equals(FireKeese.class))
-            return new FireKeese();
+            return new FireKeese(apelido);
 
         return null;
     }

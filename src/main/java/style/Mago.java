@@ -4,7 +4,7 @@ public class Mago extends Estilo {
     public Mago(){
         setNome("Mago");
         setBonusDano(10);
-        setResistencia("trovão");
+        setResistencia("Trovão");
         setBonusResistencia(40);
     }
 

@@ -1,6 +1,7 @@
 package character.personas;
 
 import entity.Personagem;
+import mechanics.AtaquesEspadas.CorteHorizontal;
 import style.Guerreiro;
 import weapon.espadas.EspadaComum;
 
@@ -14,6 +15,7 @@ public final class Link extends Personagem {
         setMp(100);
         setEstilo(new Guerreiro());
         setArma(new EspadaComum());
+        setAtaque(new CorteHorizontal());
     }
 
 }

@@ -5,7 +5,7 @@ public class Ladrao extends Estilo {
     public Ladrao(){
         setNome("Ladrão");
         setBonusDano(10);
-        setResistencia("");
+        setResistencia("Escuridão");
         setBonusResistencia(40);
     }
 

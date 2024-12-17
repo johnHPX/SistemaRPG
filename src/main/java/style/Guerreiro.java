@@ -4,7 +4,7 @@ public class Guerreiro extends Estilo {
     public Guerreiro(){
         setNome("Guerreiro");
         setBonusDano(10);
-        setResistencia("gelo");
+        setResistencia("Gelo");
         setBonusResistencia(40);
     }
 

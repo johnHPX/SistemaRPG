@@ -1,6 +1,7 @@
 package character.personas;
 
 import entity.Personagem;
+import mechanics.AtaquesArcos.TiroRapido;
 import style.Mago;
 import weapon.cajados.CajadoComum;
 
@@ -13,5 +14,6 @@ public final class Gandalf extends Personagem {
         setMp(300);
         setEstilo(new Mago());
         setArma(new CajadoComum());
+        setAtaque(new TiroRapido());
     }
 }

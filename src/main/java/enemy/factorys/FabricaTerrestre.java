@@ -9,13 +9,13 @@ public class FabricaTerrestre implements FabricaInimigo{
     @Override
     public Inimigo criar(Class<? extends Inimigo> e, String apelido) {
         if(e.equals(Dodongo.class))
-            return new Dodongo();
+            return new Dodongo(apelido);
         else if(e.equals(FlameFlan.class))
-            return new FlameFlan();
+            return new FlameFlan(apelido);
         else if(e.equals(Lizalfos.class))
-            return new Lizalfos();
+            return new Lizalfos(apelido);
         else if(e.equals(Ork.class))
-            return new Ork();
+            return new Ork(apelido);
 
         return null;
     }

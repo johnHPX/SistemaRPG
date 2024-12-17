@@ -9,10 +9,6 @@ public abstract class Personagem extends Entidade{
     private Arma arma;
     private Ataque ataque;
 
-    public Estilo getEstilo() {
-        return estilo;
-    }
-
     public void setAtaque(Ataque ataque) {
         this.ataque = ataque;
     }
@@ -27,6 +23,10 @@ public abstract class Personagem extends Entidade{
 
     protected void setEstilo(Estilo estilo) {
         this.estilo = estilo;
+    }
+
+    public Estilo getEstilo() {
+        return estilo;
     }
 
     public void getStatus(){

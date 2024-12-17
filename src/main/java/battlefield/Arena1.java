@@ -46,11 +46,11 @@ public class Arena1 {
     private void setuoInimigos(){
         Inimigo i;
         FabricaInimigo f = new FabricaTerrestre();
-        i = f.criar(Lizalfos.class, );
+        i = f.criar(Lizalfos.class, "Lizalfos");
         inimigos.add(i);
-        i = f.criar(Ork.class, );
+        i = f.criar(Ork.class, "Ork");
         inimigos.add(i);
-        i = f.criar(Dodongo.class, );
+        i = f.criar(Dodongo.class, "Dodongo");
         inimigos.add(i);
     }
 
@@ -77,49 +77,68 @@ public class Arena1 {
         System.out.println(linha);
 
         while (true){
-            System.out.println("Você está no controle de "+pc.getNome());
-            System.out.println("MENU DE BATALHA");
+            System.out.println("\t\t\tVocê está no controle de "+pc.getNome());
             System.out.println("-".repeat(60));
-            System.out.println("[1] ATACAR");
-            System.out.println("[2] USAR MAGIA");
+            System.out.println("\t\t\t\t\tMENU DE BATALHA");
+            System.out.println("-".repeat(60));
+            System.out.println("[1] ATACAR INIMIGO ->");
+            System.out.println("[2] USAR MAGIA ->");
             System.out.println("[3] DEFENDER");
-            System.out.println("[4] AÇOES");
-            System.out.println("[5] TROCAR DE ARMAR");
+            System.out.println("[4] AÇÕES ->");
+            System.out.println("[5] TROCAR DE ARMAR ->");
             System.out.println("[6] VER STATUS");
             System.out.println("[0] SAIR");
             System.out.println("_".repeat(60));
             System.out.print("O que vai fazer? ");
             op = leia.nextInt();
+            int opSecond;
             switch (op){
-                case 5:
-                    int op1;
+                case 1:
                     System.out.println("-".repeat(60));
-                    System.out.println("MENU DE ARMAS");
+                    int count = 1;
+                    for (Inimigo i: inimigos){
+                        System.out.printf("[%d] %s PV:%d PV:%d\n", count, i.getApelido(), i.getPv(), i.getMp());
+                        count++;
+                    }
+                    System.out.println("-".repeat(60));
+                    System.out.print("Qual é o seu alvo: ");
+                    opSecond = leia.nextInt();
+                    pc.executarAtaque(inimigos.get(opSecond - 1));
+                    System.out.println("-".repeat(60));
+                    break;
+                case 5:
+                    System.out.println("-".repeat(60));
+                    System.out.println("\t\t\t\t\tMENU DE ARMAS");
                     System.out.println("-".repeat(60));
                     System.out.println("[1] MasterSword");
                     System.out.println("[2] BusterSword");
                     System.out.println("[3] Espada Comum");
                     System.out.println("[0] Voltar");
-                    op1 = leia.nextInt();
-                    switch (op1){
+                    System.out.println("-".repeat(60));
+                    System.out.print("Por qual arma você quer trocar? ");
+                    opSecond = leia.nextInt();
+                    System.out.println("-".repeat(60));
+                    switch (opSecond){
                         case 1:
                             pc.setArma(new MasterSword());
-                            System.out.println(pc.getNome()+" trocou sua arma para a MasterSword.");
+                            System.out.println("\t\t"+pc.getNome()+" trocou sua arma para a MasterSword.");
                             break;
                         case 2:
                             pc.setArma(new BusterSword());
-                            System.out.println(pc.getNome()+" trocou sua arma para a BusterSword.");
+                            System.out.println("\t\t"+pc.getNome()+" trocou sua arma para a BusterSword.");
                             break;
                         case 3:
                             pc.setArma(new EspadaComum());
-                            System.out.println(pc.getNome()+" trocou sua arma para uma Espada comum.");
+                            System.out.println("\t\t"+pc.getNome()+" trocou sua arma para uma Espada comum.");
                             break;
                         default:
                             break;
                     }
+                    System.out.println("-".repeat(60));
                     break;
                 case 6:
                     pc.getStatus();
+                    System.out.println("-".repeat(60));
                     break;
                 default:
                     sair();

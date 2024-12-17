@@ -1,6 +1,7 @@
 package character.personas;
 
 import entity.Personagem;
+import mechanics.AtaquesEspadas.CorteHorizontal;
 import style.Ladrao;
 import weapon.adagas.AdagaComum;
 
@@ -13,5 +14,6 @@ public final class Rikku extends Personagem {
         setMp(150);
         setEstilo(new Ladrao());
         setArma(new AdagaComum());
+        setAtaque(new CorteHorizontal());
     }
 }

@@ -5,7 +5,7 @@ public class Arqueiro extends Estilo {
     public Arqueiro(){
         setNome("Arqueiro");
         setBonusDano(10);
-        setResistencia("vento");
+        setResistencia("Vento");
         setBonusResistencia(40);
     }
 
