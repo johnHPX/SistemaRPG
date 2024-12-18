@@ -1,7 +1,7 @@
 package character.factorys;
 
-import character.personas.Rikku;
-import character.personas.Vaan;
+import character.characters.Rikku;
+import character.characters.Vaan;
 import entity.Personagem;
 
 public class FabricaLadrao implements FabricaPersonagem{

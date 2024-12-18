@@ -10,6 +10,7 @@ public class Dodongo extends Inimigo {
         setPv(800);
         setMp(50);
         setNivel(1);
+        setTipo("Terrestre");
     }
 
 

@@ -1,7 +1,7 @@
 package character.factorys;
 
-import character.personas.Gandalf;
-import character.personas.Saruman;
+import character.characters.Gandalf;
+import character.characters.Saruman;
 import entity.Personagem;
 
 public class FabricaMago implements FabricaPersonagem{

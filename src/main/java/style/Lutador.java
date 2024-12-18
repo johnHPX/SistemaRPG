@@ -1,6 +1,6 @@
 package style;
 
-public class Lutador extends Estilo {
+public final class Lutador extends Estilo {
     public Lutador(){
         setNome("Lutador");
         setBonusDano(10);

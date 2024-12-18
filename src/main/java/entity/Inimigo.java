@@ -1,6 +1,8 @@
 package entity;
 
-public abstract class Inimigo extends Entidade{
+import mechanics.commands.ComandoStatus;
+
+public abstract class Inimigo extends Entidade implements ObserverEntidade, ComandoStatus {
     private String tipo;
     private String apelido;
 
@@ -20,6 +22,7 @@ public abstract class Inimigo extends Entidade{
         this.tipo = tipo;
     }
 
+    @Override
     public void getStatus(){
         System.out.println("Name: "+getNome());
         System.out.println("Apelido: "+getApelido());
@@ -28,5 +31,10 @@ public abstract class Inimigo extends Entidade{
         System.out.println("PV: "+getPv());
         System.out.println("MP: "+getMp());
         System.out.println("Tipo: "+getTipo());
+    }
+
+    @Override
+    public void executar(String evento, Entidade entidade) {
+        getStatus();
     }
 }

@@ -1,12 +1,16 @@
 package entity;
-import mechanics.Ataque;
+import mechanics.commands.ComandoFuga;
+import mechanics.commands.ComandoStatus;
+import mechanics.attacksArmas.AtaquePersonagem;
+import mechanics.spells.Feitico;
 import style.Estilo;
 import weapon.Arma;
 
-public abstract class Personagem extends Entidade{
+public abstract class Personagem extends Entidade implements ObserverEntidade, ComandoFuga, ComandoStatus {
     private Estilo estilo;
     private Arma arma;
-    private Ataque ataque;
+    private AtaquePersonagem ataque;
+    private Feitico feitico;
 
     private String armadura = "";
 
@@ -18,12 +22,12 @@ public abstract class Personagem extends Entidade{
         this.armadura = armadura;
     }
 
-    public void setAtaque(Ataque ataque) {
-        this.ataque = ataque;
+    public void setAtaque(AtaquePersonagem ataquePersonagem) {
+        this.ataque = ataquePersonagem;
     }
 
     public void executarAtaque(Inimigo inimigo){
-        ataque.executarAtaque(getNome(), estilo, arma, inimigo);
+        getAtaque().executarAtaque(getNome(), getEstilo(), getArma(), inimigo);
     }
 
     public void setArma(Arma arma) {
@@ -42,10 +46,23 @@ public abstract class Personagem extends Entidade{
         return arma;
     }
 
-    public Ataque getAtaque() {
+    public AtaquePersonagem getAtaque() {
         return ataque;
     }
 
+    public Feitico getFeitico() {
+        return feitico;
+    }
+
+    public void setFeitico(Feitico feitico) {
+        this.feitico = feitico;
+    }
+
+    public void lancarFeitico(Entidade entidade){
+        getFeitico().lancar(getNome(), entidade);
+    }
+
+    @Override
     public void getStatus(){
         System.out.println("Name: "+getNome());
         System.out.println("Descrição: "+getDescricao());
@@ -61,5 +78,27 @@ public abstract class Personagem extends Entidade{
         getEstilo().status();
         System.out.println("- - - - - - - - - - - - - - - - - - -");
         getArma().status();
+    }
+
+    @Override
+    public void fugir() {
+        System.out.println(getNome()+" fugiu da batalha...");
+    }
+
+    @Override
+    public void executar(String evento, Entidade entidade) {
+        switch (evento) {
+            case "fuga":
+                fugir();
+                break;
+            case "status":
+                getStatus();
+                break;
+            case "ataqueCombinado":
+                executarAtaque((Inimigo) entidade);
+                break;
+            default:
+                System.out.println(getNome() + " recebeu um evento desconhecido: " + evento);
+        }
     }
 }

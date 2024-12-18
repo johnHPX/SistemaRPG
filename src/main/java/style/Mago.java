@@ -1,6 +1,6 @@
 package style;
 
-public class Mago extends Estilo {
+public final class Mago extends Estilo {
     public Mago(){
         setNome("Mago");
         setBonusDano(10);

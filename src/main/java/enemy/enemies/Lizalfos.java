@@ -10,6 +10,7 @@ public class Lizalfos extends Inimigo {
         setPv(500);
         setMp(0);
         setNivel(1);
+        setTipo("Terrestre");
     }
 
 

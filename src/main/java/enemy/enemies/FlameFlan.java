@@ -10,6 +10,7 @@ public class FlameFlan extends Inimigo {
         setPv(600);
         setMp(50);
         setNivel(1);
+        setTipo("Terrestre");
     }
 
 

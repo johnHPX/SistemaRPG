@@ -10,6 +10,7 @@ public class Ork extends Inimigo {
         setPv(550);
         setMp(50);
         setNivel(1);
+        setTipo("Terrestre");
     }
 
 }

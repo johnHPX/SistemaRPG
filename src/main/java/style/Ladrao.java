@@ -1,7 +1,6 @@
 package style;
 
-
-public class Ladrao extends Estilo {
+public final class Ladrao extends Estilo {
     public Ladrao(){
         setNome("Ladrão");
         setBonusDano(10);

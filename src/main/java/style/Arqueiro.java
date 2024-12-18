@@ -1,6 +1,6 @@
 package style;
 
-public class Arqueiro extends Estilo {
+public final class Arqueiro extends Estilo {
 
     public Arqueiro(){
         setNome("Arqueiro");

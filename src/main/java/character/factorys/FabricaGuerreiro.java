@@ -1,7 +1,7 @@
 package character.factorys;
 
-import character.personas.Cloud;
-import character.personas.Link;
+import character.characters.Cloud;
+import character.characters.Link;
 import entity.Personagem;
 
 public class FabricaGuerreiro implements FabricaPersonagem{

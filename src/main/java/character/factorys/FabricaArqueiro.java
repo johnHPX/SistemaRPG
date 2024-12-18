@@ -1,7 +1,7 @@
 package character.factorys;
 
-import character.personas.Wakkar;
-import character.personas.Wander;
+import character.characters.Wakkar;
+import character.characters.Wander;
 import entity.Personagem;
 
 public class FabricaArqueiro implements FabricaPersonagem{
