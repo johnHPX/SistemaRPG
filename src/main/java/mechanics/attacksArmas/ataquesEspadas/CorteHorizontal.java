@@ -20,6 +20,7 @@ public class CorteHorizontal implements AtaquePersonagem {
                 calculo += (estilo.getBonusDano()*arma.getDano()/100);
 
             inimigo.setPv(inimigo.getPv() - calculo);
+            System.out.println(inimigo.getApelido()+" perdeu "+calculo+" de PV.");
             System.out.println("Ataque bem sucedido.");
             return;
         }

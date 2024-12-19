@@ -1,6 +1,8 @@
 package enemy.enemies;
 
 import entity.Inimigo;
+import mechanics.attacksEnimies.GolpeRapido;
+import mechanics.spells.Fogo;
 
 public class FlameFlan extends Inimigo {
     public FlameFlan(String apelido){
@@ -11,6 +13,8 @@ public class FlameFlan extends Inimigo {
         setMp(50);
         setNivel(1);
         setTipo("Terrestre");
+        setFeitico(new Fogo());
+        setAtaque(new GolpeRapido());
     }
 
 

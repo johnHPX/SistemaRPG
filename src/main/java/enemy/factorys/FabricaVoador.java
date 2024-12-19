@@ -6,7 +6,7 @@ import entity.Inimigo;
 
 public class FabricaVoador implements FabricaInimigo {
     @Override
-    public Inimigo criar(Class<? extends Inimigo> e, String apelido) {
+    public Inimigo criar(Class e, String apelido) {
         if (e.equals(BatEye.class))
             return new BatEye(apelido);
         else if(e.equals(FireKeese.class))

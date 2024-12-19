@@ -18,6 +18,7 @@ public class TiroRapido implements AtaquePersonagem {
                 calculo += (arma.getDano() * estilo.getBonusDano()/100);
 
             inimigo.setPv(inimigo.getPv() - calculo);
+            System.out.println(inimigo.getApelido()+" perdeu "+calculo+" de PV.");
             System.out.println("Ataque bem sucessedido!");
             return;
         }

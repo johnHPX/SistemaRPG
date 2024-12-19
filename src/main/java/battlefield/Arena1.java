@@ -22,6 +22,7 @@ import weapon.swords.MasterSword;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+@Deprecated
 public class Arena1 {
 
     private ArrayList<Personagem> aliados = new ArrayList<Personagem>();

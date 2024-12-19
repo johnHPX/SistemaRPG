@@ -2,20 +2,18 @@ package enemy.enemies;
 
 import entity.Inimigo;
 import mechanics.attacksEnimies.GolpeRapido;
-import mechanics.spells.Fogo;
-import mechanics.spells.Gelo;
+import mechanics.spells.Agua;
 
-public class Ork extends Inimigo {
-    public Ork(String apelido){
-        setNome("Ork");
+public class AquaFlan extends Inimigo {
+    public AquaFlan(String apelido) {
+        setNome("Aqua Flan");
         setApelido(apelido);
         setDescricao("Inimigo terrestre");
-        setPv(550);
-        setMp(50);
+        setPv(500);
+        setMp(70);
         setNivel(1);
         setTipo("Terrestre");
-        setFeitico(new Gelo());
+        setFeitico(new Agua());
         setAtaque(new GolpeRapido());
     }
-
 }

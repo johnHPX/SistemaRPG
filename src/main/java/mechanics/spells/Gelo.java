@@ -9,6 +9,7 @@ public class Gelo implements Feitico{
     public void lancar(String nome, Entidade entity) {
         System.out.println(nome+" laçou gelo em "+entity.getNome());
         entity.setPv(entity.getPv() - dano);
+        System.out.println(entity.getNome()+" perdeu "+dano+" de PV.");
         System.out.println("Feitiço bem sucedido");
     }
 }

@@ -6,16 +6,18 @@ import armor.pectorals.ArmaduraDeEspinhos;
 import armor.pectorals.TunicaVerde;
 import armor.legs.PerneirasDeFerro;
 import armor.legs.PerneirasDeSmough;
-import character.characters.Wakkar;
+import character.characters.*;
 import character.factorys.FabricaArqueiro;
 import character.factorys.FabricaGuerreiro;
+import character.factorys.FabricaMago;
 import character.factorys.FabricaPersonagem;
-import character.characters.Link;
-import character.characters.Wander;
+import enemy.enemies.AquaFlan;
+import enemy.enemies.BatEye;
 import enemy.enemies.Dodongo;
 import enemy.enemies.Lizalfos;
 import enemy.factorys.FabricaInimigo;
 import enemy.factorys.FabricaTerrestre;
+import enemy.factorys.FabricaVoador;
 import entity.Inimigo;
 import entity.Personagem;
 import entity.SistemaCombate;
@@ -29,8 +31,44 @@ import weapon.swords.MasterSword;
 
 public class Main {
 
-    public static void main(String []args) throws InterruptedException {
-        teste();
+    public static void teste2(){
+        FabricaPersonagem fabgue = new FabricaGuerreiro();
+        FabricaPersonagem fabArq = new FabricaArqueiro();
+        FabricaPersonagem fabMag = new FabricaMago();
+
+        var cloud = fabgue.criar(Cloud.class);
+        var wakkar = fabArq.criar(Wakkar.class);
+        var saruma = fabMag.criar(Saruman.class);
+
+        FabricaInimigo fabTer = new FabricaTerrestre();
+        FabricaInimigo fabVoa = new FabricaVoador();
+
+        var batEye1 = fabVoa.criar(BatEye.class, "Bat Eye 1");
+        var batEye2 = fabVoa.criar(BatEye.class, "Bat Eye 2");
+        var dodongo = fabTer.criar(Dodongo.class, "Dodongo 1");
+        var aquaFlan = fabTer.criar(AquaFlan.class, "Aqua Flan 1");
+
+        cloud.getStatus();
+        dodongo.getStatus();
+
+        System.out.println("----------------");
+
+        cloud.executarAtaque(dodongo);
+        dodongo.atacar(cloud);
+
+        System.out.println("----------------");
+        cloud.getStatus();
+        dodongo.getStatus();
+
+        System.out.println("----------------");
+        dodongo.lancarFeitico(cloud);
+        cloud.getStatus();
+    }
+
+
+    public static void main(String []args) {
+//        teste();
+        teste2();
     }
 
     public static void teste(){
@@ -38,11 +76,10 @@ public class Main {
         System.out.println("\t\t\tFactory");
         System.out.println("===================================");
 
-        Personagem p;
         FabricaPersonagem fabGue = new FabricaGuerreiro();
 
-        p = fabGue.criar(Link.class);
-        p.getStatus();
+        Personagem link = fabGue.criar(Link.class);
+        link.getStatus();
         System.out.println("--------------------------------------");
 
         Inimigo i;
@@ -54,16 +91,16 @@ public class Main {
         System.out.println("\t\t\tStrategy");
         System.out.println("===================================");
 
-        p.setArma(new ArcoComum());
+        link.setArma(new ArcoComum());
         // Strategy here
-        p.setAtaque(new TiroRapido());
-        p.executarAtaque(i);
+        link.setAtaque(new TiroRapido());
+        link.executarAtaque(i);
         System.out.println("--------------------------------------");
         i.getStatus();
         System.out.println("--------------------------------------");
         // Strategy here
-        p.setFeitico(new Trovao());
-        p.lancarFeitico(i);
+        link.setFeitico(new Trovao());
+        link.lancarFeitico(i);
         System.out.println("--------------------------------------");
         i.getStatus();
 
@@ -71,12 +108,12 @@ public class Main {
         System.out.println("\t\t\tDecorator");
         System.out.println("===================================");
 
-        p = new ElmoDeFerro(p);
-        p = new TunicaVerde(p);
-        p = new PerneirasDeFerro(p);
-        p = new LuvasDeFerro(p);
+        link = new ElmoDeFerro(link);
+        link = new TunicaVerde(link);
+        link = new PerneirasDeFerro(link);
+        link = new LuvasDeFerro(link);
 
-        p.getStatus();
+        link.getStatus();
 
         System.out.println("---------------Teste--------------");
         FabricaPersonagem fabArq = new FabricaArqueiro();
@@ -102,11 +139,11 @@ public class Main {
 
         SistemaCombate sysFight = new SistemaCombate();
 
-        sysFight.addObserver(p);
+        sysFight.addObserver(link);
         sysFight.addObserver(wander);
 
-        p.setArma(new MasterSword());
-        p.setAtaque(new CorteHorizontal());
+        link.setArma(new MasterSword());
+        link.setAtaque(new CorteHorizontal());
 
         wander.setArma(new ChamaDeFenix());
         wander.setAtaque(new TiroRapido());

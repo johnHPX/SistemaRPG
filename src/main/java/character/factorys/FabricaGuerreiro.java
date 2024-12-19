@@ -6,7 +6,7 @@ import entity.Personagem;
 
 public class FabricaGuerreiro implements FabricaPersonagem{
     @Override
-    public Personagem criar(Class<? extends Personagem> p) {
+    public Personagem criar(Class p) {
 
         if(p.equals(Link.class))
             return new Link();
