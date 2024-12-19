@@ -9,7 +9,7 @@
 ### Abstract Factory
     Ainda falta implementar...
 
-### Factory
+### Factory Method
     Usado para criar os personagens e inimigos do jogo.
     Para personagens foram criadas as fábricas para guerreiro, arqueiro, mago, ladrão e lutador. 
     Portanto pode-se criar personagens que contenham esses estilos, de forma organizada. 
