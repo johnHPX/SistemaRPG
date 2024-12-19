@@ -14,7 +14,7 @@
     Para personagens foram criadas as fábricas para guerreiro, arqueiro, mago, ladrão e lutador. 
     Portanto pode-se criar personagens que contenham esses estilos, de forma organizada. 
     Para inimigos foram criadas as fábricas de tipo terrestre e voador. 
-    Para separá qual tipo de inimigo deseja-se criar. Ás implemnetações das fábricas de personagens estão no pacote "charateres" e as fábricas de inimigos estão no pacote "enemy".
+    Para separá qual tipo de inimigo deseja-se criar. Ás implemnetações das fábricas de personagens estão no pacote "charatere" e as fábricas de inimigos estão no pacote "enemy".
 
 ### Decorator
     Usado para equipar os personagens com armaduras.
